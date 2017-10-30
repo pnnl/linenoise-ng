@@ -51,6 +51,7 @@ void linenoiseSetCompletionCallback(linenoiseCompletionCallback* fn);
 void linenoiseAddCompletion(linenoiseCompletions* lc, const char* str);
 
 char* linenoise(const char* prompt);
+void linenoiseFree(void *ptr);
 void linenoisePreloadBuffer(const char* preloadText);
 int linenoiseHistoryAdd(const char* line);
 int linenoiseHistorySetMaxLen(int len);
