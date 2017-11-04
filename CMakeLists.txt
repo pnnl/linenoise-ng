@@ -1,6 +1,6 @@
 # -*- mode: CMAKE; -*-
 
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.1)
 
 project(linenoise)
 
@@ -83,6 +83,9 @@ add_library(
   src/wcwidth.cpp
 )
 
+# mainly for MSYS on Windows
+set_property(TARGET linenoise PROPERTY C_STANDARD 99)
+
 # install
 install(TARGETS linenoise DESTINATION lib)
 
@@ -94,6 +97,7 @@ add_executable(
   example
   tst/example.c
 )
+set_property(TARGET example PROPERTY C_STANDARD 99)
 
 target_link_libraries(
   example
