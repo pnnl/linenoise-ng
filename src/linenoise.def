@@ -1,0 +1,21 @@
+LIBRARY      "linenoise"
+
+EXPORTS
+ linenoise                            @1
+ linenoiseFree                        @2
+ linenoisePreloadBuffer               @3
+ linenoiseHistoryAdd                  @4
+ linenoiseHistorySetMaxLen            @5
+ linenoiseHistoryLine                 @6
+ linenoiseHistorySave                 @7
+ linenoiseHistoryLoad                 @8
+ linenoiseHistoryFree                 @9
+ linenoiseClearScreen                @10
+ linenoiseSetMultiLine               @11
+ linenoisePrintKeyCodes              @12
+ linenoiseInstallWindowChangeHandler @13
+ linenoiseKeyType                    @14
+ linenoiseAddCompletion              @15
+ linenoiseSetCompletionCallback      @16
+ 
+ 

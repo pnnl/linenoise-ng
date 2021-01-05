@@ -35,7 +35,7 @@ C interface.
 To build this library, you will need a C++11-enabled compiler and
 some recent version of CMake.
 
-## Build instructions
+## Build instructions - Linux or Mac OSX
 
 To build this library on Linux, first create a build directory
 
@@ -61,6 +61,23 @@ variable when invoking `make install`:
 ```bash
 (cd build && make DESTDIR=/tmp install)
 ```
+
+## Build instructions - Windows
+
+Install compiler and Cmake from: https://visualstudio.microsoft.com/downloads/ 
+(find `Build Tools for Visual Studio 2019` under `Tools for Visual Studio 2019`)
+
+Then follow these instructions:
+
+1. Open the `x64 Native Tools Command Prompt for VS 2019`
+2. From the _linenoise-ng_ project directory:
+   1. `md build`
+   2. `cd build`
+   3. `cmake ..`
+   4. `cmake --build . --config Release`
+3. Test _example.exe_ and/or link _linenoise.dll_ from the Release subdirectory
+
+## Deprecated build instructions - Windows
 
 To build the library on Windows, use these commands in an MS-DOS command 
 prompt:
