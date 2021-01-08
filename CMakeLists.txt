@@ -96,7 +96,10 @@ endif()
 set_property(TARGET linenoise PROPERTY C_STANDARD 99)
 
 # install
-install(TARGETS linenoise DESTINATION lib)
+install(TARGETS linenoise 
+  RUNTIME DESTINATION bin
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib)
 
 # headers
 install(FILES include/linenoise.h DESTINATION include)
